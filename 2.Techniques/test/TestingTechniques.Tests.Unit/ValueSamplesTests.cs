@@ -13,7 +13,7 @@ public class ValueSamplesTests
     {
         var fullName = _sut.FullName;
 
-        fullName.Should().Be("Nick Chapsas");
+        fullName.Should().Be("Tuan Pham");
         fullName.Should().NotBeEmpty();
         fullName.Should().StartWith("Nick");
         fullName.Should().EndWith("Chapsas");
@@ -46,7 +46,7 @@ public class ValueSamplesTests
     {
         var expected = new User
         {
-            FullName = "Nick Chapsas",
+            FullName = "Tuan Pham",
             Age = 21,
             DateOfBirth = new(2000, 6, 9)
         };
@@ -63,7 +63,7 @@ public class ValueSamplesTests
     {
         var expected = new User
         {
-            FullName = "Nick Chapsas",
+            FullName = "Tuan Pham",
             Age = 21,
             DateOfBirth = new (2000, 6, 9)
         };

@@ -2,7 +2,7 @@
 
 public class ValueSamples
 {
-    public string FullName = "Nick Chapsas";
+    public string FullName = "Tuan Pham";
 
     public int Age = 21;
 
@@ -10,7 +10,7 @@ public class ValueSamples
 
     public User AppUser = new()
     {
-        FullName = "Nick Chapsas",
+        FullName = "Tuan Pham",
         Age = 21,
         DateOfBirth = new (2000, 6, 9)
     };
@@ -19,7 +19,7 @@ public class ValueSamples
     {
         new User()
         {
-            FullName = "Nick Chapsas",
+            FullName = "Tuan Pham",
             Age = 21,
             DateOfBirth = new (2000, 6, 9)
         },

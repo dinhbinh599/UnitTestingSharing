@@ -22,12 +22,12 @@ public class DatabaseInitializer
         await connection.ExecuteAsync("CREATE TABLE IF NOT EXISTS Users (Id TEXT PRIMARY KEY, FullName TEXT NOT NULL)");
         var nickChapsas =
             await connection.QuerySingleOrDefaultAsync<User>("SELECT * FROM Users where FullName = @FullName",
-                new { FullName = "Nick Chapsas" });
+                new { FullName = "Tuan Pham" });
 
         if (nickChapsas is null)
         {
             await connection.ExecuteAsync("INSERT INTO Users (Id, FullName) VALUES (@Id, @FullName)",
-                new { Id = Guid.NewGuid().ToString(), FullName = "Nick Chapsas" });
+                new { Id = Guid.NewGuid().ToString(), FullName = "Tuan Pham" });
         }
     }
 }

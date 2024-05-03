@@ -47,7 +47,7 @@ public class UserServiceTests
         var nickChapsas = new User
         {
             Id = Guid.NewGuid(),
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
         var expectedUsers = new[]
         {
@@ -114,7 +114,7 @@ public class UserServiceTests
         var existingUser = new User
         {
             Id = Guid.NewGuid(),
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
         _userRepository.GetByIdAsync(existingUser.Id).Returns(existingUser);
 
@@ -169,7 +169,7 @@ public class UserServiceTests
         var user = new User
         {
             Id = Guid.NewGuid(),
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
         _userRepository.CreateAsync(user).Returns(true);
 
@@ -187,7 +187,7 @@ public class UserServiceTests
         var user = new User
         {
             Id = Guid.NewGuid(),
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
         _userRepository.CreateAsync(user).Returns(true);
 
@@ -208,7 +208,7 @@ public class UserServiceTests
         var user = new User
         {
             Id = Guid.NewGuid(),
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
         var sqliteException = new SqliteException("Something went wrong", 500);
         _userRepository.CreateAsync(user)

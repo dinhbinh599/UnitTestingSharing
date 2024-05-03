@@ -1,3 +1,5 @@
 ﻿using Xunit;
 
-//[assembly: CollectionBehavior(MaxParallelThreads = 32)]
+[assembly: CollectionBehavior(collectionBehavior:CollectionBehavior.CollectionPerAssembly)]
+//[assembly: CollectionBehavior(DisableTestParallelization = true)]
+//[assembly: CollectionBehavior(MaxParallelThreads = 16)]
