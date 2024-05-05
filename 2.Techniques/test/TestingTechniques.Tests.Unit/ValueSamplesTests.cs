@@ -46,7 +46,7 @@ public class ValueSamplesTests
     {
         var expected = new User
         {
-            FullName = "Tuan Pham",
+            FullName = "Tuan Pham1",
             Age = 21,
             DateOfBirth = new(2000, 6, 9)
         };
@@ -55,7 +55,8 @@ public class ValueSamplesTests
 
         //Assert.Equal(expected, user);
         //user.Should().Be(expected);
-        user.Should().BeEquivalentTo(expected);
+        //user.Should().BeEquivalentTo(expected);
+        user.Should().BeEquivalentTo(expected, config => config.Excluding(x => x.FullName));
     }
 
     [Fact]

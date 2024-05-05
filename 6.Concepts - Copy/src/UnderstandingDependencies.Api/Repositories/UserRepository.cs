@@ -17,6 +17,6 @@ public class UserRepository : IUserRepository
     public async Task<IEnumerable<User>> GetAllAsync()
     {
         using var connection = await _connectionFactory.CreateDbConnectionAsync();
-        return await connection.QueryAsync<User>("select * from Users");
+        return await connection.QueryAsync<User>("select * from main.Users");
     }
 }

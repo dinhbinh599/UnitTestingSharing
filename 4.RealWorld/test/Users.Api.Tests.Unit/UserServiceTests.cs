@@ -44,14 +44,14 @@ public class UserServiceTests
     public async Task GetAllAsync_ShouldReturnUsers_WhenSomeUsersExist()
     {
         // Arrange
-        var nickChapsas = new User
+        var tuanPham = new User
         {
             Id = Guid.NewGuid(),
             FullName = "Tuan Pham"
         };
         var expectedUsers = new[]
         {
-            nickChapsas
+            tuanPham
         };
         _userRepository.GetAllAsync().Returns(expectedUsers);
 
@@ -59,7 +59,7 @@ public class UserServiceTests
         var result = await _sut.GetAllAsync();
 
         // Assert
-        //result.Single().Should().BeEquivalentTo(nickChapsas);
+        //result.Single().Should().BeEquivalentTo(tuanPham);
         result.Should().BeEquivalentTo(expectedUsers);
     }
 

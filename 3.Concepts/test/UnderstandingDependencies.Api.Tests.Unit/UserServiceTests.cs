@@ -13,7 +13,6 @@ public class UserServiceTests
 {
     private readonly UserService _sut;
     private readonly IUserRepository _userRepository = Substitute.For<IUserRepository>();
-    //private readonly Mock<IUserRepository> _userRepositoryMock = new();
 
     public UserServiceTests()
     {
@@ -25,7 +24,6 @@ public class UserServiceTests
     {
         // Arrange
         _userRepository.GetAllAsync().Returns(Array.Empty<User>());
-        //_userRepositoryMock.Setup(x => x.GetAllAsync()).ReturnsAsync(Array.Empty<User>());
 
         // Act
         var users = await _sut.GetAllAsync();
