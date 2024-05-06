@@ -42,14 +42,14 @@ public class UserServiceTests
     public async Task GetAllAsync_ShouldReturnUsers_WhenSomeUsersExist()
     {
         // Arrange
-        var nickChapsas = new User
+        var tuanPham = new User
         {
             Id = Guid.NewGuid(),
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
         var expectedUsers = new[]
         {
-            nickChapsas
+            tuanPham
         };
         _userRepository.GetAllAsync().Returns(expectedUsers);
 
@@ -57,7 +57,7 @@ public class UserServiceTests
         var result = await _sut.GetAllAsync();
 
         // Assert
-        //result.Single().Should().BeEquivalentTo(nickChapsas);
+        //result.Single().Should().BeEquivalentTo(tuanPham);
         result.Should().BeEquivalentTo(expectedUsers);
     }
 
@@ -101,7 +101,7 @@ public class UserServiceTests
         var existingUser = new User
         {
             Id = Guid.NewGuid(),
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
         _userRepository.GetByIdAsync(existingUser.Id).Returns(existingUser);
 
@@ -176,7 +176,7 @@ public class UserServiceTests
         var userCreating = new User
         {
             Id = Guid.NewGuid(),
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
         _userRepository.CreateAsync(userCreating).Returns(true);
 
@@ -191,23 +191,23 @@ public class UserServiceTests
     public async Task CreateAsync_ShouldLogCorrectMessages_WhenInvoked()
     {
         // Arrange
-        var nickChapsas = new User
+        var tuanPham = new User
         {
             Id = Guid.NewGuid(),
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
-        _userRepository.CreateAsync(nickChapsas).Returns(true);
+        _userRepository.CreateAsync(tuanPham).Returns(true);
 
         // Act
-        await _sut.CreateAsync(nickChapsas);
+        await _sut.CreateAsync(tuanPham);
 
         // Assert
         _logger.Received(1).LogInformation(Arg.Is("Creating user with id {0} and name: {1}"),
-            Arg.Is(nickChapsas.Id),
-            Arg.Is(nickChapsas.FullName));
+            Arg.Is(tuanPham.Id),
+            Arg.Is(tuanPham.FullName));
 
         _logger.Received(1).LogInformation(Arg.Is("User with id {0} created in {1}ms"),
-            Arg.Is(nickChapsas.Id),
+            Arg.Is(tuanPham.Id),
             Arg.Any<long>());
     }
 

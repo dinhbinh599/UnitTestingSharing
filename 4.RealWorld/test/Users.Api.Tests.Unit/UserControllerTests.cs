@@ -32,7 +32,7 @@ public class UserControllerTests
         var user = new User
         {
             Id = Guid.NewGuid(),
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
         _userService.GetByIdAsync(user.Id).Returns(user);
         var userResponse = user.ToUserResponse();
@@ -79,7 +79,7 @@ public class UserControllerTests
         var user = new User
         {
             Id = Guid.NewGuid(),
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
         var users = new[] { user };
         var usersResponse = users.Select(x => x.ToUserResponse());
@@ -99,7 +99,7 @@ public class UserControllerTests
         // Arrange
         var createUserRequest = new CreateUserRequest
         {
-            FullName = "Nick Chapsas"
+            FullName = "Tuan Pham"
         };
         var user = new User
         {

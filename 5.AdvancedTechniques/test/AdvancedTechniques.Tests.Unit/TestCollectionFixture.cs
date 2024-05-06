@@ -2,7 +2,7 @@
 
 namespace AdvancedTechniques.Tests.Unit;
 
-[CollectionDefinition("My awesome collection fixture")]
+[CollectionDefinition("My collection fixture", DisableParallelization = true)]
 public class TestCollectionFixture : ICollectionFixture<MyClassFixture>
 {
 

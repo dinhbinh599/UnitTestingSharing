@@ -4,7 +4,7 @@ using Xunit.Abstractions;
 
 namespace AdvancedTechniques.Tests.Unit;
 
-[Collection("My awesome collection fixture")]
+[Collection("My collection fixture")]
 public class CollectionFixturesBehaviorTests
 {
     private readonly ITestOutputHelper _testOutputHelper;
@@ -32,7 +32,7 @@ public class CollectionFixturesBehaviorTests
     }
 }
 
-[Collection("My awesome collection fixture")]
+[Collection("My collection fixture")]
 public class CollectionFixturesBehaviorTestsAgain
 {
     private readonly ITestOutputHelper _testOutputHelper;

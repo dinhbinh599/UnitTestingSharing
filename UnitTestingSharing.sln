@@ -60,6 +60,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedTechniques", "5.Adv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedTechniques.Tests.Unit", "5.AdvancedTechniques\test\AdvancedTechniques.Tests.Unit\AdvancedTechniques.Tests.Unit.csproj", "{BFA0D528-8FE7-4FAB-B83B-C3E43C03A62F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.Concepts - Copy", "6.Concepts - Copy", "{62BF3A8A-B42E-45D8-95DB-94AC85E53082}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82D8A3D1-4620-4384-B45F-341448465D09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C15973F8-B852-49D0-9212-7BAA9148DEBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingDependencies.Api.Tests.Unit", "6.Concepts - Copy\test\UnderstandingDependencies.Api.Tests.Unit\UnderstandingDependencies.Api.Tests.Unit.csproj", "{10769FC3-A67D-4BC9-94A8-157A47FC3979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingDependencies.Api", "6.Concepts - Copy\src\UnderstandingDependencies.Api\UnderstandingDependencies.Api.csproj", "{E00E8F4A-10E1-4FC2-A73D-3FB55F111644}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +100,10 @@ Global
 		{96600F42-BA48-41AC-B2DD-56B9B5564B87} = {F72D78B4-518B-49FE-ADBD-50E3B74ED6FC}
 		{2B00BDF0-7EF7-4750-AD53-61859C181AB5} = {074AE73C-4AD3-4CF3-8AB6-ADD9450436E8}
 		{BFA0D528-8FE7-4FAB-B83B-C3E43C03A62F} = {70E0B143-1669-4E7A-992D-4C7B08C77EC6}
+		{82D8A3D1-4620-4384-B45F-341448465D09} = {62BF3A8A-B42E-45D8-95DB-94AC85E53082}
+		{C15973F8-B852-49D0-9212-7BAA9148DEBB} = {62BF3A8A-B42E-45D8-95DB-94AC85E53082}
+		{10769FC3-A67D-4BC9-94A8-157A47FC3979} = {C15973F8-B852-49D0-9212-7BAA9148DEBB}
+		{E00E8F4A-10E1-4FC2-A73D-3FB55F111644} = {82D8A3D1-4620-4384-B45F-341448465D09}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4B2ADC1D-B29D-4C83-94CF-240F296A7AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -148,5 +162,13 @@ Global
 		{BFA0D528-8FE7-4FAB-B83B-C3E43C03A62F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFA0D528-8FE7-4FAB-B83B-C3E43C03A62F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFA0D528-8FE7-4FAB-B83B-C3E43C03A62F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10769FC3-A67D-4BC9-94A8-157A47FC3979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10769FC3-A67D-4BC9-94A8-157A47FC3979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10769FC3-A67D-4BC9-94A8-157A47FC3979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10769FC3-A67D-4BC9-94A8-157A47FC3979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E00E8F4A-10E1-4FC2-A73D-3FB55F111644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E00E8F4A-10E1-4FC2-A73D-3FB55F111644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E00E8F4A-10E1-4FC2-A73D-3FB55F111644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E00E8F4A-10E1-4FC2-A73D-3FB55F111644}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

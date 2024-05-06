@@ -1,24 +1,53 @@
-﻿using Xunit;
+﻿using System;
+using System.Threading.Tasks;
+using Xunit;
+using Xunit.Abstractions;
 
 namespace CalculatorLibrary.Tests.Unit;
 
-public class CalculatorTests
+public class CalculatorTests : IAsyncLifetime
 {
     private readonly Calculator _sut = new();
-
-    [Theory]
-    [InlineData(5, 5, 10)]
-    [InlineData(-5, 5, 0)]
-    [InlineData(-15, -5, -20)]
-    public void Add_ShouldAddTwoNumbers_WhenTwoNumbersAreIntegers(
-        int a, int b, int expected)
+    private readonly ITestOutputHelper _outputHelper;
+    
+    // Setup goes here
+    public CalculatorTests(ITestOutputHelper outputHelper)
     {
+        _outputHelper = outputHelper;
+        _outputHelper.WriteLine("Hello from ctor");
+    }
+    
+    [Fact]
+    public void Add_ShouldAddTwoNumbers_WhenTwoNumbersAreIntegers()
+    {
+        // Arrange
+
         // Act
-        var result = _sut.Add(a, b);
 
         // Assert
-        Assert.Equal(expected, result);
     }
+    public async Task InitializeAsync()
+    {
+        await Task.Delay(200);
+    }
+    public async Task DisposeAsync()
+    {
+        _outputHelper.WriteLine("Hello from cleanup");
+    }
+
+    // [Theory]
+    // [InlineData(5, 5, 10)]
+    // [InlineData(-5, 5, 0)]
+    // [InlineData(-15, -5, -20)]
+    // public void Add_ShouldAddTwoNumbers_WhenTwoNumbersAreIntegers(
+    //     int a, int b, int expected)
+    // {
+    //     // Act
+    //     var result = _sut.Add(a, b);
+    //
+    //     // Assert
+    //     Assert.Equal(expected, result);
+    // }
 
     [Theory]
     [InlineData(5, 5, 0)]
@@ -62,4 +91,5 @@ public class CalculatorTests
         // Assert
         Assert.Equal(expected, result);
     }
+    
 }

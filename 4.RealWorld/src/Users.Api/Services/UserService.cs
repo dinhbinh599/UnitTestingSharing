@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using Users.Api.Logging;
 using Users.Api.Models;
 using Users.Api.Repositories;
